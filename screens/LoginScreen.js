@@ -7,9 +7,11 @@ import alertFunction from "../helper/AlertFunction";
 
 const LoginScreen = () => {
     const navigation = useNavigation();
+     //google sign in
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [loader, setLoader] = useState(false);
+  
 
     loginUser = async (email, password) => {
         try{
@@ -72,6 +74,7 @@ const LoginScreen = () => {
             <TouchableOpacity onPress={() => navigation.navigate('ForgetPassword')}>
                 <Text style={styles.link}>Forgot your password?</Text>
             </TouchableOpacity>
+            
         </View>
     )
 }
