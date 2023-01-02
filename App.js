@@ -8,6 +8,7 @@ import { firebase }  from './config';
 import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import Dashboard from './screens/Dashboard';
+import ForgetPasswordScreen from './screens/ForgetPasswordScreen';
 
 const Stack = createStackNavigator();
 
@@ -35,8 +36,12 @@ function App() {
     return (
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Login" component={LoginScreen} />
+
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Dashboard" component={Dashboard} />
           <Stack.Screen name="Register" component={RegisterScreen} />
+    
+          <Stack.Screen name="ForgetPassword" component={ForgetPasswordScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     );
